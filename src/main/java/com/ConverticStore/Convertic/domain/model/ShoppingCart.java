@@ -2,7 +2,7 @@ package com.ConverticStore.Convertic.domain.model;
 
 import java.util.Date;
 
-public class shoppingCart {
+public class ShoppingCart {
 
     private Integer id;
     private Date date;
@@ -11,7 +11,7 @@ public class shoppingCart {
     private Products products;
     private Integer quantity;
 
-    public shoppingCart(Date date, String status, User user, Products products, Integer quantity) {
+    public ShoppingCart(Date date, String status, User user, Products products, Integer quantity) {
         this.date = date;
         this.status = status;
         this.user = user;
