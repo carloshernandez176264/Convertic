@@ -1,4 +1,4 @@
-package com.ConverticStore.Convertic.domain.model.dto;
+package com.ConverticStore.Convertic.infraestructure.entrypoint.dto;
 
 import com.ConverticStore.Convertic.domain.model.TypeDocument;
 import com.ConverticStore.Convertic.domain.model.User;
@@ -13,9 +13,15 @@ public class UserDTO {
     private TypeDocument typeDocument;
     private String numberDocument;
 
+
     public User toDomain(){
         return new User(name, lastName, email, password, typeDocument, numberDocument);
     }
+
+    public static UserDTO fromDomain(User user){
+        return new UserDTO(user.getName(), user.getLastName(), user.getEmail(), user.getPassword(), user.getTypeDocument(), user.getNumberDocument());
+    }
+
     public UserDTO(String name, String lastName, String email, String password, TypeDocument typeDocument, String numberDocument) {
         this.name = name;
         this.lastName = lastName;
